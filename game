@@ -1,0 +1,22 @@
+import random
+
+data = ["r", "p", "s"]
+computer = random.choice(data)
+user = input("enter r, p or s: ").lower()
+if user == "r" and computer == "s":
+    print("user win")
+elif computer == "r" and user == "s":
+    print("computer win")
+elif user == "p" and computer == "r":
+    print("user win")
+elif computer == "p" and user == "r":
+    print("computer win")
+elif user == "s" and computer == "p":
+    print("user win")
+elif computer == "s" and user == "p":
+    print("computer win")
+elif user not in data:
+    print("choose either r, s and p")
+else:
+    print("tie game")
+print(f"user choice: {user} and computer choice: {computer}")
